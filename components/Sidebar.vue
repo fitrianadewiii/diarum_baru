@@ -6,7 +6,7 @@
           <aside class="column">
             <nav class="menu">
               <p class="menu-label">
-                General
+                Generals
               </p>
               <ul class="menu-list">
                 <li><a class="is-active" href="..//home.vue">Dashboard</a></li>
