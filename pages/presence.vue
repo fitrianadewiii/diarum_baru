@@ -5,36 +5,78 @@
       <nav class="breadcrumb is-medium" aria-label="breadcrumbs">
         <ul>
           <li><a href="#">Home</a></li>
-          <li class="is-active"><a href="#" aria-current="page">Community</a></li>
+          <li class="is-active"><a href="#" aria-current="page">Presence</a></li>
         </ul>
       </nav>
       <hr>
     </div>
-    <main class="column main">
-       <div class="column">
-        <div class="level">
-          <div class="level-left">
-            <div class="level-item">
-              <div class="field is-grouped">
-                <p class="control is-expanded">
-                  <input class="input" type="text" placeholder="Find By Name">
-                </p>
-                <p class="control">
-                  <a class="button is-info">
-                    Search
-                  </a>
-                </p>
-              </div>
-            </div>
+    <main class="column main is-mobile">
+      <div class="columns is-mobile ">
+        <div class="column is-3 ">
+          <p>Find Name</p>
+          <br>
+          <div class="field is-grouped">
+            <p class="control is-expanded">
+              <input class="input" type="text" placeholder="Find By Name">
+            </p>
           </div>
-          <div class="level-right">
-            <div class="level-item">
-              
-            </div>
+        </div>
+        <div class="column is-3">
+          <p>Start Date</p>
+          <br>
+          <div class="field is-grouped">
+            <p class="control is-expanded">
+              <input class="input" type="Date" placeholder="Start Date">
+            </p>
+          </div>
+        </div>
+        <div class="column is-3">
+          <p>End Date</p>
+          <br>
+          <div class="field is-grouped">
+            <p class="control is-expanded">
+              <input class="input" type="Date" placeholder="Find By Name">
+            </p>
+          </div>
+        </div>
+        <div class="column is-3">
+          <br>
+          <br>
+          <div class="field is-grouped">
+            <p class="control">
+              <a class="button is-info">
+                Filter
+              </a>
+            </p>
           </div>
         </div>
       </div>
+      <div class="column is-4" style="margin-top: -50px;">
+        <div class="card">
+          <div class="card-content">              
+              <article class="media">
+                <figure class="media-left">
+                  <p class="image is-64x64">
+                   <img src="../assets/profile1.png">
+                  </p>
+                </figure>
+                <div class="media-content">
+                  <div class="content">
+                    <p>
+                      <strong>John Smith</strong>
+                      <br>
+                      <strong>Head of ICT Section</strong>
+                    </p>
+                  </div>
+                  
+                </div>
+              </article>
+          </div>
+        </div>
+      </div>
+
       <div class="columns is-multiline">
+
         <div class="column" style="margin-top:-50px">
           <div class="table__wrapper">
             <table class="table is-bordered pricing__table is-fullwidth">
@@ -43,16 +85,16 @@
                   <center><abbr title="Position">No</abbr></center>
                 </th>
                 <th>
-                  <center><abbr title="Played">Username/Nik</abbr></center>
+                  <center><abbr title="Played">Date</abbr></center>
                 </th>
                 <th>
-                  <center><abbr title="Won">Location</abbr></center>
+                  <center><abbr title="Won">CheckIn Time</abbr></center>
                 </th>
                 <th>
-                  <center><abbr title="Goal difference">Checkin </abbr></center>
+                  <center><abbr title="Goal difference">CheckOut Time </abbr></center>
                 </th>
                 <th>
-                  <center><abbr title="Goal difference">Checkout</abbr></center>
+                  <center><abbr title="Goal difference">Location</abbr></center>
                 </th>
                 <th>
                   Status
@@ -64,10 +106,10 @@
               <tbody>
                 <tr v-for="(data_komunitas, key) in data" :key="key">
                   <td class="center">1</td>
-                  <td class="center">{{data_komunitas.nik}}</td>
-                  <td class="center">{{data_komunitas.location}}</td>
+                  <td class="center">{{data_komunitas.date}}</td>
                   <td class="center">{{data_komunitas.checkin}}</td>
                   <td class="center">{{data_komunitas.checkout}}</td>
+                  <td class="center">{{data_komunitas.location}}</td>
                   <td class="center">{{data_komunitas.status}}</td>
                   <td class="center">{{data_komunitas.emoticon}}</td>
                 </tr>
@@ -91,7 +133,7 @@
         </div>
       </div>
 
-      
+
 
     </main>
 
@@ -109,33 +151,42 @@
       return {
         isActiveForm: false,
         data: [{
-          nik: '12345678',
-          location: 'TLT- Graha Merah Putih',
-          checkin: '20/03/2019 09:00',
-          checkout: '20/03/2019 17.30',
-          status:'Reguler',
-          emoticon: ':)',
-          isActiveDrop: false,
-        }
-        , {
-          nik: '12345678',
-          location: 'TLT- Graha Merah Putih',
-          checkin: '20/03/2019 09:00',
-          checkout: '20/03/2019 17.30',
-          status:'Reguler',
-          emoticon: ':)',
-          isActiveDrop: false,
-        },
-        {
-          nik: '12345678',
-          location: 'TLT- Graha Merah Putih',
-          checkin: '20/03/2019 09:00',
-          checkout: '20/03/2019 17.30',
-          status:'Reguler',
-          emoticon: ':)',
-          isActiveDrop: false,
-        }]      
-    }
+            date: '20/03/2019',
+            checkin: '09:00',
+            checkout: '17.30',
+            location: 'TLT- Graha Merah Putih',
+            status: 'Reguler',
+            emoticon: 'Under Pressure',
+            isActiveDrop: false,
+          }, {
+            date: '20/03/2019',
+            checkin: '09:00',
+            checkout: '17.30',
+            location: 'TLT- Graha Merah Putih',
+            status: 'Reguler',
+            emoticon: 'Under Pressure',
+            isActiveDrop: false,
+          },
+          {
+            date: '21/03/2019',
+            checkin: '09:00',
+            checkout: '17.30',
+            location: 'TLT- Graha Merah Putih',
+            status: 'Reguler',
+            emoticon: 'Comfort',
+            isActiveDrop: false,
+          },
+          {
+            date: '22/03/2019',
+            checkin: '09:00',
+            checkout: '17.30',
+            location: 'TLT- Graha Merah Putih',
+            status: 'Reguler',
+            emoticon: 'Happy',
+            isActiveDrop: false,
+          },
+        ]
+      }
     },
     methods: {
       openmodal() {
@@ -158,7 +209,7 @@
 
 </script>
 
-<style >
+<style>
   .breadcumb {
     display: block;
     flex-basis: 0;
@@ -182,6 +233,7 @@
 
   .center {
     text-align: center;
+    
   }
 
   .table__wrapper {
