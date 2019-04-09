@@ -1,0 +1,29 @@
+{
+  "name": "first_trial",
+  "version": "1.0.0",
+  "description": "My ace Nuxt.js project",
+  "author": "fitrianadewiii",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "@amcharts/amcharts4": "^4.3.5",
+    "@nuxtjs/bulma": "^1.2.1",
+    "amcharts3": "amcharts/amcharts3",
+    "bulma": "^0.7.4",
+    "bulma-extensions": "^6.2.1",
+    "cross-env": "^5.2.0",
+    "jquery": "^3.3.1",
+    "nuxt": "^2.4.0",
+    "vue-bulma-tabs": "^1.1.3",
+    "vue-sidebar-menu": "^3.6.3"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.9",
+    "sass-loader": "^7.1.0"
+  }
+}
